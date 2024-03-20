@@ -1,0 +1,19 @@
+<h1>Edit Customer</h1>
+
+<%= form_with(model: @customer, url: update_customer_path(@customer), local: true) do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+  <div>
+    <%= form.label :gender %>
+    <%= form.select :gender, ['male', 'female', 'other'] %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
