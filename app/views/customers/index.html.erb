@@ -1,0 +1,19 @@
+<h1>Customers List</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @customers.each do |customer| %>
+      <tr>
+        <td><%=salutation_gender(customer.gender)%><%= customer.name %></td>
+        <td><%= customer.email %></td>
+        <td><%= customer.gender %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
